@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Stock Finder</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{url_for('static', filename='css/styleq1.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="whiterect">
+                <span class="top">
+                    <h1 class="q1">
+                        What topics speak to you?
+                    </h1>
+                    <button class="continue" id="con">Continue</button>
+                </span>
+                <section class="buttons">
+                    <div class="element">
+                        <button class="circle1" id="realestate">
+                            <img class="icon" src="{{url_for('static', filename='images/house.png')}}">
+                        </button>
+                        <h2 class = "type1">Real Estate</h2>   
+                    </div>
+                    <div class="element">
+                        <button class="circle1" id="financial">
+                            <img class="icon" src="{{url_for('static', filename='images/bars.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Finance</h2>   
+                    </div> 
+                    <div class="element">
+                        <button class="circle1" id="communication">
+                            <img class="icon" src="{{url_for('static', filename='images/conversation.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Communication</h2>   
+                    </div>
+                     <div class="element">
+                        <button class="circle1" id="industrials">
+                            <img class="icon" src="{{url_for('static', filename='images/factory.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Industry</h2>   
+                    </div> 
+                    <br>
+                    <div class="element2">
+                        <button class="circle1" id="basicmaterials"> 
+                            <img class="icon" src="{{url_for('static', filename='images/gold.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Materials</h2>   
+                    </div>
+                    <div class="element2">
+                        <button class="circle1" id="healthcare">
+                            <img class="icon" src="{{url_for('static', filename='images/heart.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Health</h2>   
+                    </div>
+                    <div class="element2">
+                        <button class="circle1" id="technology">
+                            <img class="icon" src="{{url_for('static', filename='images/project-management.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Technology</h2>   
+                    </div>
+                    <div class="element2">
+                        <button class="circle1" id="energy">
+                            <img class="icon" src="{{url_for('static', filename='images/renewable-energy.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Energy</h2>   
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <h1 class="copyright">© Team Lenna 2021</h1>
+    </footer>
+    <script>
+        var str = "";
+
+        buttons = document.getElementsByClassName("circle1");
+        for (var i = 0; i < buttons.length; ++i) {
+            buttons[i].addEventListener("click", function() {
+                str += this.id;
+            });
+        }
+
+        var con = document.getElementsByTagName("button")[0];
+        con.addEventListener("click", function() {
+            $.get("/topic_selection/" + str);
+            $(location).attr("href", "amount_selection");
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>

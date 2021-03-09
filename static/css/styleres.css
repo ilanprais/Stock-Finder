@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+body{
+    background-color: #61defa;
+    font-size: 1vw;
+}
+
+.whiterect{
+    height: 85%; /* Full-height: remove this if you want "auto" height */
+    width: 70%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    margin-left: 15%;
+    margin-top: 4%;
+    background-color: white; 
+    box-shadow: 10px 5px #e3e3e8;
+}
+
+.arrowcircle{
+    width:9%;
+    height: 14%;
+    margin-top: 25%;
+    margin-left: 3%;
+    border-radius: 100%;
+    background-color: #61defa;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.arrowcircle:hover{
+    width: 10%;
+    height: 15%;
+    -webkit-transition-duration: 0.3s; 
+}
+
+.leftarrow{
+    width: 80%;
+    height: 80%;
+    margin-top: 7%;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    border-radius: 100%;
+    border-color: transparent;
+}
+
+.next{
+    position: absolute;
+    top: -40%;
+    margin-left: 20%;
+}
+
+.proceed{
+    position: absolute;
+    top: -40%;
+    margin-left: 16%;
+}
+
+
+.rightarrow{
+    width: 80%;
+    height: 80%;
+    margin-top: 7%;
+    margin-right: 5%;
+    margin-left: 15%;
+    margin-bottom: 0%;
+    border-radius: 100%;
+    border-color: transparent;
+}
+
+.arrowcircleright{
+    width:9%;
+    height: 14%;
+    margin-top: 25%;
+    margin-right: 3%;
+    margin-left: 73%;
+    border-radius: 100%;
+    background-color: #61defa;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.arrowcircleright:hover{
+    width: 10%;
+    height: 15%;
+    -webkit-transition-duration: 0.3s; 
+}
+
+.graybox{
+    height: 90%;
+    width: 67%;
+    margin-left: 16%;
+    margin-top: -30%;
+    background-color: #ebebeb;
+}
+
+.darkbox{
+    height:30%;
+    width: 100%;
+    background-color: #b3b3b3;
+}
+
+.logo{
+    width: 22%;
+    margin-left: 5%;
+}
+
+.name{
+    position:absolute;
+    left: 35%;
+    top: 15%;
+    font-size:190%;
+}
+
+.sideline{
+    position: absolute;
+    margin-top: 17%;
+    margin-left: 20%;
+    height:57%;
+    width: 0.3%;
+    border-color: transparent;
+    background-color: black;
+
+}
+
+.maininfo{
+    margin-left: 37%;
+    margin-top: 5%;
+    font-size: 70%;
+}
+
+.about{
+    color:dimgrey
+}
+
+.stockinfo{
+    width: 30%;
+    margin-top: 10%;
+}
+
+.pricetitle{
+    text-align: center;
+    font-size: 130%;
+    margin-top: -100%;
+}
+
+.price{
+    text-align: center;
+    margin-top: 4%;
+    color:sienna;
+}
+
+.growthtitle{
+    text-align: center;
+    font-size: 130%;
+    margin-top: 10%;
+}
+
+.growth{
+    text-align: center;
+    margin-top: 4%;
+    color: green;
+}
+
+.risktitle{
+    text-align: center;
+    font-size: 130%;
+    margin-top: 10%;
+}
+
+.risk{
+    text-align: center;
+    margin-top: 4%;
+    color: rgb(241, 136, 37);
+}
+
+.investbutton{
+   margin-left: 15%;
+   margin-top: 25%;
+   width:70%;
+   height: 200%;
+   font-size: 200%;
+   border-radius: 10px;
+   outline: none;
+   cursor: pointer;
+}
+
+.copyright{
+    position:fixed;
+    bottom: 1%;
+    left:40%;
+    padding-left: 5%;
+    font-size: 70%;
+}
+

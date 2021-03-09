@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Stock Finder</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{url_for('static', filename='css/styleres.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}">
+</head>
+<body>
+    <main>
+        <div class="whiterect">
+            <div class="arrowcircle">
+                <h2 class="next">Next</h2>
+                <img class="leftarrow" src="{{url_for('static', filename='images/left-arrow.png')}}"/>
+            </div>
+            <div class="arrowcircleright">
+                <h2 class="proceed">Invest!</h2>
+                <img class="rightarrow" src="{{url_for('static', filename='images/right-arrow.png')}}"/>
+            </div>
+            <div class="graybox">
+                <hr class="sideline">
+                <div class="darkbox">
+                    <img class="logo" src="{{url}}">
+                    <h1 class="name">{{company_name}}</h1>
+                </div>
+                <div class="maininfo">
+                    <h2 class="about">About</h2>
+                    <h2 class="description">
+                        {{description}}
+                    </h2>
+                    <br>
+                    <h2 class="about">Location</h2>
+                    <h2 class="location">
+                        {{country}}
+                    </h2>
+                    <br>
+                    <h2 class="about">Industry</h2>
+                    <h2 class="industry">
+                        {{industry}}
+                    </h2>
+                </div>
+                <div class="stockinfo">
+                    <h1 class="pricetitle">Stock Price</h1>
+                    <h2 class="price">{{price}}$</h2>
+                    <h1 class="growthtitle">Quarter Growth</h1>
+                    <h2 class="growth">{{growth}}%</h2>
+                    <button class="investbutton">Invest!</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <h1 class="copyright">© Team Lenna 2021</h1>
+    </footer>
+    <script>
+        var str = "";
+
+        button = document.getElementsByClassName("arrowcircle")[0];
+        button.addEventListener("click", function() {
+            $.get("/investments_options");
+            location.reload();
+        });
+
+        var company_name = document.getElementsByClassName("name")[0].innerHTML;
+
+        button = document.getElementsByClassName("arrowcircleright")[0];
+        button.addEventListener("click", function() {
+            $(location).attr("href", "https://www.google.co.il/search?q=buy+" + company_name + "+stock");
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>

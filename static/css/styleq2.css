@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+body{
+    background-color: #61defa;
+    font-size: 1vw;
+}
+
+.whiterect{
+    height: 85%; /* Full-height: remove this if you want "auto" height */
+    width: 90%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    margin-left: 5%;
+    margin-top: 4%;
+    position: absolute;
+    background-color: white; 
+}
+
+.top{
+    white-space: nowrap;
+}
+
+.continue{
+    margin-left: 10%;
+    display: inline-block;
+    width: 15%;
+    height: 10%;
+    font-size: 150%;
+    background-color: #e8632a;
+    border-color: transparent;
+    border-radius: 20px;
+    -webkit-transition-duration: 0.4s; 
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.continue:hover{
+    border-color: #e8632a;
+    color: #e8632a;
+    background-color: transparent;
+    -webkit-transition-duration: 0.3s; 
+}
+
+.q1{
+    text-align: left;
+    margin-top: 4%;
+    margin-left: 5%; 
+    font-size: 300%; 
+    display: inline-block;
+    -webkit-transition-duration: 0.6s;
+}
+
+.buttons{
+    -webkit-transition-duration: 0.6s;
+    margin-right: 3%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.element{
+    width: 10%;
+    height: 17%;
+    margin-right: 9%;
+    margin-left: 5%;
+    margin-top: 12%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.circle1{
+    width: 20vh;
+    height: 20vh;
+    margin-left: 0%;
+    margin-bottom: 5%;
+    border-radius: 100%;
+    border-color: transparent;
+    background-color: #cff0ff;
+    -webkit-transition-duration: 0.4s;
+    outline: none;
+    cursor: pointer;
+}
+
+.type1{
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 4%;
+}
+
+.circle1:hover{
+    background-color: transparent;
+    border-color: #cff0ff;
+}
+
+.icon{
+    margin-left: 0%;
+    width: 50%;
+}
+
+.copyright{
+    position:fixed;
+    bottom: 1%;
+    left:40%;
+    padding-left: 5%;
+    font-size: 70%;
+}

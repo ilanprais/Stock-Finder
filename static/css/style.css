@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+body{
+    background-color: #61defa;
+    font-size: 1vw;
+}
+
+.whitebox{
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 43%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  float:left;
+  margin-left: 0vw;
+  margin-top: 0vw;
+  position: absolute;
+  background-color: rgb(255, 255, 255); 
+}
+
+.maintitle{
+    text-align: left;
+    margin-top: 25%;
+    margin-left: 12%;
+    font-size: 360%; 
+    -webkit-transition-duration: 0.5s; 
+}
+
+.info{
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 12%;
+    margin-right: 12%;
+    font-size: 100%;
+    -webkit-transition-duration: 0.5s; 
+}
+
+.start{
+    margin-left: 12%;
+    margin-top: 12%;
+    width: 30%;
+    height: 10%;
+    font-size: 150%;
+    background-color: #e8632a;
+    border-color: transparent;
+    border-radius: 20px;
+    -webkit-transition-duration: 0.5s; 
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.start:hover{
+    -webkit-transition-duration: 0.3s; 
+    border-color: #e8632a;
+    color: #e8632a;
+    background-color: transparent;
+}
+
+.copyright{
+    position:fixed;
+    bottom: 2%;
+    left:12%;
+    padding-left: 5%;
+    font-size: 70%;
+}
+
+.logo{
+    width: 230%;
+}
+
+.screen{
+    margin-left: 5%;
+    position: absolute;
+    right: 32%;
+    top: 12%
+}

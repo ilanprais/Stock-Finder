@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Stock Finder</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{url_for('static', filename='css/styleq2.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="whiterect">
+                <span class="top">
+                    <h1 class="q1">
+                        how much are you willing to invest?
+                    </h1>
+                    <button class="continue">Continue</button>
+                </span>
+                <section class="buttons">
+                    <div class="element">
+                        <button class="circle1" id="10">
+                            <img class="icon" src="{{url_for('static', filename='images/dollar.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Under 10$</h2>   
+                    </div>
+                    <div class="element">
+                        <button class="circle1" id="20">
+                            <img class="icon" src="{{url_for('static', filename='images/coin.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Under 20$</h2>   
+                    </div> 
+                    <div class="element">
+                        <button class="circle1" id="50">
+                            <img class="icon" src="{{url_for('static', filename='images/money.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Under 50$</h2>   
+                    </div>
+                     <div class="element">
+                        <button class="circle1" id="100">
+                            <img class="icon" src="{{url_for('static', filename='images/money-bag.png')}}"/>
+                        </button>
+                        <h2 class = "type1">Over 50$</h2>   
+                    </div> 
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <h1 class="copyright">© Team Lenna 2021</h1>
+    </footer>
+    <script>
+        var str = "";
+
+        buttons = document.getElementsByClassName("circle1");
+        for (var i = 0; i < buttons.length; ++i) {
+            buttons[i].addEventListener("click", function() {
+                str += this.id;
+            });
+        }
+
+        var con = document.getElementsByTagName("button")[0];
+        con.addEventListener("click", function() {
+            $.get("/amount_selection/" + str);
+            $(location).attr("href", "investments_options");
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>
